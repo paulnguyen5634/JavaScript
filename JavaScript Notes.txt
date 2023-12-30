@@ -168,3 +168,16 @@ JavaScript will try to convert strings to numbers in all numeric operations (exc
     let x = "100";
     let y = "10";
     let z = x - y; // Result: 90
+
+You can use the global JavaScript function isNaN() to find out if a value is a not a number:
+
+    let x = 100 / "Apple";
+    isNaN(x); // Result: True
+
+Watch out for NaN. If you use NaN in a mathematical operation, the result will also be NaN:
+
+    let x = NaN;
+    let y = 5;
+    let z = x + y; // Result: NaN
+
+NaN is a number: typeof NaN returns number:
