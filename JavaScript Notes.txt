@@ -103,9 +103,68 @@ Practice:
 
     const age = someCode(birthday);
 
-How would we capitalize the variable names when birthday is known before the code is ran is age is a function callback?
+How would we capitalize the variable names when birthday is known before the code is ran and age is the result of a function callback?
 
     const BIRTHDAY = '18.04.1982'; // Birthday is known before code is ran so it should be ALL CAPS
 
     const age = someCode(birthday); // Age is the result of a callback function, we dont knwo this prior to running code and is NOT HARDCODED, camelCase!
     
+NUMBERS/OPERATORS
+
+Operator	Description
++	        Addition
+-	        Subtraction
+*	        Multiplication
+**	        Exponentiation (ES2016)
+/	        Division
+%	        Modulus (Remainder)
+++	        Increment
+--	        Decrement
+
+EX:
+
+    let x = 100 + 50; //
+
+NOTE: 
+    - js numbers are always 64 bit floating point
+    - integer precision are accurate up to 15 digits
+    - Floating point arithmetic is not always 100% accurate:
+
+        let x = 0.2 + 0.1; // Result: 0.2 + 0.1 = 0.30000000000000004
+
+        -To solve the problem above, it helps to multiply and divide:
+
+        let x = (0.2 * 10 + 0.1 * 10) / 10; // Result: 0.2 + 0.1 = 0.3
+
+Adding strings
+
+    let x = "20";
+    let y = "10";
+    let z = x+y; // Result: "1020" string concatenation
+
+Adding number with string
+
+    let x = 20;
+    let y = "10";
+    let z = x+y; // Result: "2010" string concatenation
+
+Common Mistakes
+
+    let x = 10;
+    let y = 20;
+    let z = "The result is: " + x + y; // Result: "The result is: 1020" String concatenation
+
+    let x = 10;
+    let y = 20;
+    let z = "30";
+    let result = x + y + z; // Result: 3030
+
+JavaScript will try to convert strings to numbers in all numeric operations (except Addition)
+
+    let x = "100";
+    let y = "10";
+    let z = x + y; // Result: 10010
+
+    let x = "100";
+    let y = "10";
+    let z = x - y; // Result: 90
