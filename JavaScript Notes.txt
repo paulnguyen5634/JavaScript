@@ -51,5 +51,61 @@ Does Not Work
 
     num = 5; // Throws an error
 
+Declaring an UNCHANGING variable, use "const"
 
+    const birthDate = '18.04.1982'
+
+These variables cannot be changed or reassigned
+
+    const birthDate = '18.04.1983' // Throws an error
+
+Usecase:
+
+In practice constant variables are mainly used to assign difficult to remember values (unicodes to colors, etc)
+
+EX:
+    const COLOR_RED = "#F00"
+    let color = COLOR_RED;
+    alert color; // #F00
+
+NOTE: capital-named constants are only used as aliases for “hard-coded” values.
+In cases where we have yet to fill what the constant value will be use camelCase
+
+Practice:
+1. Declare two variables: admin and name.
+
+    let admin;
+    let name;
+
+2. Assign the value "John" to name.
+
+    name = "John"
+
+3. Copy the value from name to admin.
+
+    admin = name;
+
+4. Show the value of admin using alert (must output “John”).
+
+    alert name;
+
+5. Create a variable with the name of our planet. How would you name such a variable?
+
+    let planetName = "Earth"; // Use camelCase
+
+6. Create a variable to store the name of a current visitor to a website. How would you name that variable?
+
+    let currentVisitor;
+
+7. Examine js below
+
+    const birthday = '18.04.1982';
+
+    const age = someCode(birthday);
+
+How would we capitalize the variable names when birthday is known before the code is ran is age is a function callback?
+
+    const BIRTHDAY = '18.04.1982'; // Birthday is known before code is ran so it should be ALL CAPS
+
+    const age = someCode(birthday); // Age is the result of a callback function, we dont knwo this prior to running code and is NOT HARDCODED, camelCase!
     
