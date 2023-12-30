@@ -29,4 +29,27 @@ Delcaring twice will trigger an ERROR!
     let message = 'World'
 
 So, we should declare a variable once and then refer to it without let.
+
+When variable name is multiple words use camelCase
+    lowerstartUpper
+
+$ and _ are valid naming conventions
+
+    let $ = 1;
+    let _ = 1;
+
+    alert ($ + _); // 2
+
+In prior versions of js, we can assign variables by mere assignment, it still works now id we dont "use strict" in our script
+
+Works
+    num = 5;
+    alert num;
+
+Does Not Work
+    "use strict"
+
+    num = 5; // Throws an error
+
+
     
